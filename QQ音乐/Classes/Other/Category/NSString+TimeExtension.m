@@ -1,0 +1,22 @@
+//
+//  NSString+TimeExtension.m
+//  QQ音乐
+//
+//  Created by apple on 15/8/14.
+//  Copyright (c) 2015年 xiaomage. All rights reserved.
+//
+
+#import "NSString+TimeExtension.h"
+
+@implementation NSString (TimeExtension)
+
++ (NSString *)stringWithTime:(NSTimeInterval)time
+{
+    // 1.获取分钟和秒钟
+    NSInteger minute = time / 60;
+    NSInteger second = (NSInteger)time % 60;
+    
+    return [NSString stringWithFormat:@"%02ld:%02ld", minute, second];
+}
+
+@end
